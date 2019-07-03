@@ -1,0 +1,15 @@
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    pl = pull
+    ps = push
+    dt = difftool
+    logp = log -p
+    l = log --stat
+    cp = cherry-pick
+    ca = commit -a
+    br = branch
+[user]
+	email = yukisora2013@gmail.com
+	name = Yuki Sora
