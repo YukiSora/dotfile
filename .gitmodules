@@ -7,9 +7,6 @@
 [submodule ".vim/pack/plugins/start/vim-devicons"]
 	path = .vim/pack/plugins/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
-[submodule ".vim/pack/plugins/start/vim-one"]
-	path = .vim/pack/plugins/start/vim-one
-	url = https://github.com/rakr/vim-one.git
 [submodule ".vim/pack/plugins/start/vim-nerdtree-syntax-highlight"]
 	path = .vim/pack/plugins/start/vim-nerdtree-syntax-highlight
 	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
@@ -58,9 +55,30 @@
 [submodule ".vim/pack/plugins/start/vim-hug-neovim-rpc"]
 	path = .vim/pack/plugins/start/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc.git
-[submodule ".vim/pack/plugins/start/deoplete-tabnine"]
-	path = .vim/pack/plugins/start/deoplete-tabnine
-	url = https://github.com/tbodt/deoplete-tabnine.git
 [submodule ".vim/pack/plugins/start/ale"]
 	path = .vim/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule ".vim/pack/plugins/start/vim-go"]
+	path = .vim/pack/plugins/start/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/pack/plugins/start/deoplete-go"]
+	path = .vim/pack/plugins/start/deoplete-go
+	url = https://github.com/deoplete-plugins/deoplete-go.git
+[submodule ".vim/pack/plugins/start/vim-polyglot"]
+	path = .vim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule ".vim/pack/plugins/start/onedark.vim"]
+	path = .vim/pack/plugins/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
+[submodule ".vim/pack/plugins/start/deoplete-jedi"]
+	path = .vim/pack/plugins/start/deoplete-jedi
+	url = https://github.com/deoplete-plugins/deoplete-jedi.git
+[submodule ".vim/pack/plugins/start/phpcd.vim"]
+	path = .vim/pack/plugins/start/phpcd.vim
+	url = https://github.com/lvht/phpcd.vim.git
+[submodule ".vim/pack/plugins/start/vim-repeat"]
+	path = .vim/pack/plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule ".vim/pack/plugins/start/delimitMate"]
+	path = .vim/pack/plugins/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git

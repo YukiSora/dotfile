@@ -87,6 +87,8 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
+set splitbelow
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,17 +98,9 @@ syntax enable
 " Enable 256 colors palette
 set t_Co=256
 
-colorscheme one
-
-set background=dark
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+let g:onedark_termcolors=16
+packadd! onedark.vim
+colorscheme onedark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -367,7 +361,7 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
 set updatetime=100
 
 " vim-airline
-let g:airline_theme='violet'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 
@@ -391,4 +385,15 @@ map / <Plug>(incsearch-stay)
 map ? <Plug>(incsearch-fuzzy-/)
 
 " deoplete.nvim
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup=1
+" close preview window after completion
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" use tab to forward cycle
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+
+" deoplete-go
+let g:deoplete#sources#go#package_dot=1
+
+" deoplete-jedi
+let g:deoplete#sources#jedi#show_docstring=1
