@@ -128,6 +128,7 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+set list lcs=tab:\|\ "(here is a space)"
 
 set ai "Auto indent
 set si "Smart indent
