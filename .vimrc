@@ -44,6 +44,7 @@ endif
 
 "Always show current position
 set ruler
+set cursorline
 
 set number
 
@@ -98,9 +99,9 @@ syntax enable
 " Enable 256 colors palette
 set t_Co=256
 
-let g:onedark_termcolors=16
 packadd! onedark.vim
 colorscheme onedark
+set termguicolors
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -398,3 +399,6 @@ let g:deoplete#sources#go#package_dot=1
 
 " deoplete-jedi
 let g:deoplete#sources#jedi#show_docstring=1
+
+" nvim
+set guicursor=
