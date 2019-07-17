@@ -1,3 +1,6 @@
+[user]
+    email = yukisora2013@gmail.com
+    name = Yuki Sora
 [alias]
     co = checkout
     ci = commit
@@ -10,6 +13,3 @@
     cp = cherry-pick
     ca = commit -a
     br = branch
-[user]
-	email = yukisora2013@gmail.com
-	name = Yuki Sora
