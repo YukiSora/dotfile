@@ -195,8 +195,8 @@ endtry
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-noremap <leader><Tab> :tabnext<CR>
-noremap <leader><S-Tab> :tabprevious<CR>
+noremap <leader><Tab> :bnext<CR>
+noremap <leader><S-Tab> :bprevious<CR>
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -400,5 +400,9 @@ let g:deoplete#sources#go#package_dot=1
 " deoplete-jedi
 let g:deoplete#sources#jedi#show_docstring=1
 
+" vim-go
+let g:go_term_enabled = 1
+
 " nvim
 set guicursor=
+tnoremap <Esc> <C-\><C-n>

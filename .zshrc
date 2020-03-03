@@ -3,7 +3,7 @@ if [[ -z "$TMUX"  ]] && [ "$SSH_CONNECTION" != ""  ]; then
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/go/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$HOME/go/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$(whoami)/.oh-my-zsh"
@@ -73,7 +73,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 extract npm pip go)
+plugins=(git encode64 extract npm pip go virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,3 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vi=nvim
+
+function stopwatch(){
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 0.1
+   done
+}

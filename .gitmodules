@@ -82,3 +82,6 @@
 [submodule ".vim/pack/plugins/start/delimitMate"]
 	path = .vim/pack/plugins/start/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule ".vim/pack/plugins/start/vim-php-cs-fixer"]
+	path = .vim/pack/plugins/start/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
