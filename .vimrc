@@ -367,7 +367,7 @@ let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 
-" tmuxline.vim
+" nerdcommenter
 " [count]<leader>cc 注释
 " [count]<leader>cu 取消注释
 " [count]<leader>ci 根据注释状态进行注释或者取消注释
@@ -390,9 +390,6 @@ map ? <Plug>(incsearch-fuzzy-/)
 let g:deoplete#enable_at_startup=1
 " close preview window after completion
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-" use tab to forward cycle
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <silent><expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 
 " deoplete-go
 let g:deoplete#sources#go#package_dot=1
@@ -402,6 +399,28 @@ let g:deoplete#sources#jedi#show_docstring=1
 
 " vim-go
 let g:go_term_enabled = 1
+
+" leaderF
+let g:Lf_GtagsAutoGenerate = 1
+let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>ff :LeaderfFunction<CR>
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+let g:Lf_RgConfig = [
+        \ "--max-columns=150",
+        \ "--type-add web:*.{html,css,js}*",
+        \ "--glob=!git/*",
+        \ "--hidden"
+    \ ]
+" search word under cursor, the pattern is treated as regex, and enter normal mode directly
+noremap <leader>fg :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR><CR>
+" search word under cursor literally only in current buffer
+noremap <leader>fgb :<C-U><C-R>=printf("Leaderf! rg -F --current-buffer -e %s ", expand("<cword>"))<CR><CR>
+" recall last search. If the result window is closed, reopen it.
+noremap <leader>fgo :<C-U><C-R>=printf("Leaderf! rg --recall %s", "")<CR><CR>
 
 " nvim
 set guicursor=
